@@ -1,0 +1,273 @@
+<!DOCTYPE html> <!-- khai báo HTML5 -->
+<html lang="vi"> <!-- ngôn ngữ tiếng Việt -->
+<head>
+<meta charset="UTF-8"> <!-- hỗ trợ tiếng Việt -->
+<title>Index - Smart But Casual</title> <!-- tiêu đề tab -->
+
+<style>
+
+/* ===== TOÀN TRANG ===== */
+body {
+    margin: 0; /* bỏ khoảng trắng ngoài */
+    padding: 0;
+    font-family: Arial, sans-serif; /* kiểu chữ */
+    background-color: #f0f0f0; /* nền xám */
+}
+
+/* ===== KHUNG CHÍNH ===== */
+#wrapper {
+    width: 1100px; /* độ rộng */
+    margin: 0 auto; /* căn giữa */
+    background-color: #fff; /* nền trắng */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* đổ bóng */
+}
+
+/* ===== THANH NÂU TRÊN CÙNG ===== */
+.top-bar {
+    background-color: #7d6e66; /* màu nâu */
+    height: 25px; /* chiều cao */
+}
+
+/* ===== MENU ===== */
+nav {
+    background-color: #007054; /* màu xanh */
+    height: 40px;
+    display: flex; /* dàn ngang */
+    justify-content: center; /* căn giữa ngang */
+    align-items: center; /* căn giữa dọc */
+}
+
+/* chữ menu */
+nav a {
+    color: #004d3a; /* màu chữ */
+    text-decoration: none; /* bỏ gạch chân */
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0 45px; /* khoảng cách giữa các mục */
+}
+
+/* hover menu */
+nav a:hover {
+    color: orange; /* rê chuột đổi màu cam */
+}
+
+/* hover tiêu đề */
+.banner-right h1:hover,
+.banner-right h2:hover,
+.section-title:hover {
+    color: red; /* rê chuột đổi đỏ */
+}
+
+/* ===== BANNER ===== */
+.banner {
+    background-color: #e8e0d5; /* nền */
+    display: flex; /* chia 2 cột */
+    align-items: stretch;
+    padding: 0;
+    height: 450px; 
+}
+
+/* bên trái banner */
+.banner-left {
+    width: 40%;
+    display: flex;
+    align-items: flex-end; /* ảnh chạm đáy */
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ảnh người mẫu */
+.banner-left img {
+    height: 100%; /* cao hết khung */
+    width: auto; /* giữ tỉ lệ */
+    object-fit: contain;
+    display: block;
+}
+
+/* bên phải banner */
+.banner-right {
+    width: 60%;
+    background-color: #f0f8ff; /* nền xanh nhạt */
+    padding: 40px 60px; /* khoảng cách trong */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* căn giữa nội dung */
+}
+
+/* tiêu đề lớn */
+.banner-right h1 {
+    color: #4a708b;
+    font-size: 48px;
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* tiêu đề nhỏ */
+.banner-right h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* đoạn văn */
+.banner-right p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify; /* canh đều */
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* khung nút */
+.btn-holder {
+    text-align: center; /* căn giữa nút */
+}
+
+/* hover nút */
+.shop-btn:hover {
+    background-color: #d8cfc4; /* nền nâu nhạt */
+    border: 1px solid #7b5e57; /* viền nâu */
+    color: orange; /* chữ cam */
+}
+
+/* nút shop */
+.shop-btn {
+    display: inline-block;
+    border: 1px solid #333;
+    padding: 12px 30px;
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ===== TIÊU ĐỀ PHẦN ===== */
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    font-family: "Times New Roman", Times, serif;
+    margin: 30px auto;
+    width: 95%;
+    border-bottom: 1px solid #ccc; /* gạch dưới */
+    padding-bottom: 10px;
+}
+
+/* ===== DANH SÁCH SẢN PHẨM ===== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cột */
+    gap: 20px; /* khoảng cách */
+    padding: 0 30px;
+}
+
+/* mỗi sản phẩm */
+.product-item {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ảnh sản phẩm */
+.product-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover; /* không méo */
+    background-color: #ebebeb;
+    display: block;
+}
+
+/* chữ dưới ảnh */
+.product-item p {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+/* ===== MAP ===== */
+.map-container {
+    padding: 0 30px;
+}
+
+/* ảnh map (không dùng vì dùng iframe) */
+.map-container img {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #2e7d32;
+    font-size: 16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <div class="top-bar"></div> <!-- thanh nâu -->
+
+    <!-- menu -->
+    <nav>
+        <a href="#">HOME</a>
+        <a href="#">MEN</a>
+        <a href="#">WOMAN</a>
+        <a href="#">KIDS</a>
+        <a href="#">CONTACT</a>
+    </nav>
+
+    <!-- banner -->
+    <div class="banner">
+        <div class="banner-left">
+            <img src="Images/banner_img.jpg" alt="Model">
+        </div>
+
+        <div class="banner-right">
+          <h1>Smart But Casual</h1>
+            <h2>Start your shopping here...</h2>
+<p>
+          Pellentesque neque leo, dictum sit amet accumsan non, dignissim ac mauris. Mauris rhoncus, lectus tincidunt tempus aliquam, odio libero tincidunt metus, sed euismod elit enim ut mi. Nulla porttitor et dolor sed condimentum. Praesent porttitor lorem dui, in pulvinar enim rhoncus vitae. Curabitur tincidunt, turpis ac lobortis hendrerit, ex elit vestibulum est, at faucibus erat ligula non neque. Pellentesque neque leo, dictum sit amet accumsan non, dignissim ac mauris. Mauris rhoncus, lectus tincidunt tempus aliquam, odio libero tincidunt metus, sed euismod elit enim ut mi. Nulla porttitor et dolor sed condimentum. Praesent porttitor lorem dui, in pulvinar enim rhoncus vitae. Curabitur tincidunt, turpis ac lobortis hendrerit, ex elit vestibulum est, at faucibus erat ligula non neque.
+      </p>
+
+            <div class="btn-holder">
+                <a href="#" class="shop-btn">SHOP COLLECTION NOW</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- tiêu đề -->
+    <div class="section-title">Latest Products</div>
+
+    <!-- sản phẩm -->
+    <div class="product-grid">
+        <div class="product-item"><img src="Images/l2.jpg"><p>Neque porro</p></div>
+        <div class="product-item"><img src="Images/l4.jpg"><p>Neque porro</p></div>
+        <div class="product-item"><img src="Images/p3.jpg"><p>similique sunt</p></div>
+        <div class="product-item"><img src="Images/p4.jpg"><p>similique sunt</p></div>
+
+        <div class="product-item"><img src="Images/p5.jpg"><p>Neque porro</p></div>
+        <div class="product-item"><img src="Images/p6.jpg"><p>Neque porro</p></div>
+        <div class="product-item"><img src="Images/p7.jpg"><p>similique sunt</p></div>
+        <div class="product-item"><img src="Images/p8.jpg"><p>similique sunt</p></div>
+    </div>
+
+    <!-- bản đồ -->
+    <div class="map-container">
+      
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6632.506483317928!2d151.263862!3d-33.779958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12abc7edcbeb07%3A0x5017d681632bfc0!2sManly%20Vale%20New%20South%20Wales%202093%2C%20%C3%9Ac!5e0!3m2!1svi!2sin!4v1652866371849!5m2!1svi!2sin" width="100%" height="100%" ></iframe>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        © 2022 Thiết kế quản trị website CN20CD!
+    </footer>
+
+</div>
+
+</body>
+</html>
